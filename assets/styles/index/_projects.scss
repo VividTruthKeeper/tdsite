@@ -1,0 +1,9 @@
+.projects-inner {
+  @include flex(column);
+  gap: 3.2rem;
+  padding-bottom: 10rem;
+}
+
+.projects-img {
+  @include imgStyle($objFit: contain);
+}
