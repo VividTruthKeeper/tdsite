@@ -1,0 +1,27 @@
+.nav-inner {
+  padding: 2.4rem 0;
+  @include flex;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.nav-right,
+.nav-left {
+  @include grid(false, 1fr);
+  align-items: center;
+}
+
+.nav-links {
+  @include flex;
+  justify-content: space-between;
+  gap: 6.2rem;
+
+  a,
+  span {
+    padding: 1rem 0;
+    @include stretch;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: $base-blue;
+  }
+}
