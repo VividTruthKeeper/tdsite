@@ -25,3 +25,7 @@
     color: $base-blue;
   }
 }
+
+.nav-logo {
+  @include imgStyle(19.6rem, 4.3rem, contain);
+}
