@@ -1,0 +1,47 @@
+.products-inner {
+  @include flex(column);
+  gap: 3.2rem;
+  padding-bottom: 10rem;
+}
+
+.products-content {
+  @include flex(column);
+  gap: 2.4rem;
+}
+
+.products-item {
+  @include imgStyle($objFit: cover);
+  position: relative;
+  overflow: hidden;
+  img {
+    transform: scale(1);
+    @include transition-std;
+  }
+  h5 {
+    line-height: 38px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include stretch;
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 3.2rem;
+    color: $base-white;
+    opacity: 1;
+    @include transition-std;
+  }
+
+  &:hover {
+    h5 {
+      opacity: 0;
+      @include transition-std;
+    }
+    img {
+      transform: scale(1.1);
+      @include transition-std;
+    }
+  }
+}
