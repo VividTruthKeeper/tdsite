@@ -652,4 +652,33 @@ a {
   color: #ffffff;
   text-align: center;
 }
+
+.main-inner {
+  padding: 10rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.2rem;
+}
+
+.about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2.4rem;
+}
+
+.about-content p {
+  font-size: 2.4rem;
+  line-height: 150%;
+  color: #333333;
+}
 /*# sourceMappingURL=style.css.map */
