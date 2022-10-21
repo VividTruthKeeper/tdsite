@@ -39,3 +39,11 @@ a {
   padding: 0 4rem;
   margin: 0 auto;
 }
+
+.section-title {
+  @include section-title;
+}
+
+.btn {
+  @include btn;
+}

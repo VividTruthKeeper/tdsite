@@ -1,0 +1,57 @@
+.about-inner {
+  gap: 3.2rem;
+  padding: 10rem 0;
+  @include grid(false, 1fr 1fr);
+}
+
+.about-left {
+  @include flex(column);
+  gap: 2.4rem;
+}
+
+.about-btn {
+  max-width: 14.4rem;
+  cursor: pointer;
+}
+
+.about-left {
+  h5 {
+    font-size: 2.4rem;
+    color: $base-black;
+    font-weight: normal;
+    line-height: 2.9rem;
+  }
+  h6 {
+    font-size: 1.8rem;
+    color: $base-black;
+    font-weight: normal;
+    line-height: 2.9rem;
+  }
+}
+
+.about-right {
+  @include grid(false, 1fr);
+  justify-content: flex-end;
+}
+
+.about-img {
+  justify-self: flex-end;
+  @include imgStyle(44.4rem, 55rem, cover);
+  position: relative;
+  z-index: 2;
+}
+
+.about-dots {
+  z-index: -1;
+  position: absolute;
+  @include imgStyle(30rem, 27.5rem, contain);
+}
+
+.about-dots-blue {
+  top: -7.2rem;
+  right: -7.2rem;
+}
+.about-dots-orange {
+  bottom: -7.2rem;
+  left: -7.2rem;
+}
