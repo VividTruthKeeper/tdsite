@@ -681,4 +681,10 @@ a {
   line-height: 150%;
   color: #333333;
 }
+
+.about-content p a {
+  color: #305ba9;
+  text-decoration: underline;
+  font-weight: bold;
+}
 /*# sourceMappingURL=style.css.map */

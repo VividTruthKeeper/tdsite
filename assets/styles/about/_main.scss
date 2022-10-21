@@ -11,5 +11,11 @@
     font-size: 2.4rem;
     line-height: 150%;
     color: $base-black;
+
+    a {
+      color: $base-blue;
+      text-decoration: underline;
+      font-weight: bold;
+    }
   }
 }
