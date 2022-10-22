@@ -1,0 +1,65 @@
+.top-footer-inner {
+  padding-bottom: 16rem;
+  @include grid(false, repeat(3, minmax(17rem, 21.2rem)));
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.top-footer-item {
+  @include flex(column);
+  justify-content: center;
+  gap: 1.6rem;
+
+  p {
+    text-align: center;
+    color: $base-black;
+    line-height: 1.9rem;
+    font-size: 1.6rem;
+    @include flex(column);
+    gap: 0.8rem;
+
+    a {
+      text-align: center;
+      @include flex;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        &:first-child:not(.nonce) {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.top-footer-img {
+  @include stretch;
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    @include stretch;
+    max-width: 4.8rem;
+    max-height: 4.8rem;
+    object-fit: contain;
+  }
+}
+
+.top-footer-head {
+  @include flex(column);
+  justify-content: center;
+  gap: 2.4rem;
+
+  h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+    color: $base-blue;
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
