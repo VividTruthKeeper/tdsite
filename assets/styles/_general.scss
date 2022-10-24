@@ -47,3 +47,7 @@ a {
 .btn {
   @include btn;
 }
+
+.main {
+  min-height: 79.4vh;
+}
