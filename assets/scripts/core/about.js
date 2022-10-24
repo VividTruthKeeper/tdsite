@@ -1,24 +1,4 @@
-// Swiper
-const partnerSwiper = new Swiper(".partnerSwiper", {
-  slidesPerView: 4,
-  // spaceBetween: 60,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: true,
-  },
-  loop: true,
-  navigation: {
-    prevEl: ".partner-prev",
-    nextEl: ".partner-next",
-  },
-  pagination: {
-    clickable: true,
-    el: ".swiper-pagination",
-  },
-});
-
-// Abstract class
-export class Select {
+class Select {
   selectorValue;
   /**
    * ID or classname of an element
@@ -41,7 +21,7 @@ export class Select {
 }
 
 // Year
-export class AssignYear {
+class AssignYear {
   element;
   /**
    * @param {string} id
