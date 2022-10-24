@@ -55,10 +55,10 @@
 
 .form-right {
   @include flex(column);
-  gap: 0.8rem;
+  gap: 2.4rem;
 
   button {
-    margin-top: 6.7rem;
+    margin-top: 3.3rem;
     cursor: pointer;
   }
 

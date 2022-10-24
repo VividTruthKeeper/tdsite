@@ -1,6 +1,6 @@
 .about-inner {
   gap: 3.2rem;
-  padding: 10rem 0;
+  padding: 16rem 0 10rem;
   @include grid(false, 1fr 1fr);
 }
 
@@ -18,13 +18,13 @@
 .about-left {
   h5 {
     margin-top: 0.8rem;
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     color: $base-black;
     font-weight: normal;
     line-height: 2.9rem;
   }
   h6 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $base-black;
     font-weight: normal;
     line-height: 2.9rem;
@@ -38,7 +38,7 @@
 
 .about-img {
   justify-self: flex-end;
-  @include imgStyle(44.4rem, 55rem, cover);
+  @include imgStyle(40rem, 49.5rem, cover);
   position: relative;
   z-index: 2;
 }

@@ -64,10 +64,11 @@
 }
 
 .swiper-pagination-bullet {
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.4rem;
+  height: 1.4rem;
   &:not(:last-child) {
     margin-right: 2rem !important;
+    margin-left: 0 !important;
   }
 }
 .swiper-pagination-bullet-active {
