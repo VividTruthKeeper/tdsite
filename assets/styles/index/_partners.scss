@@ -32,6 +32,7 @@
 
   .swiper-wrapper {
     align-items: center;
+    min-height: 30rem;
   }
 }
 
@@ -41,7 +42,7 @@
   width: 6rem;
   height: 6rem;
   padding: 1rem;
-  top: 25%;
+  top: 40%;
   img {
     width: 4rem;
     height: 4rem;
@@ -64,8 +65,8 @@
 }
 
 .swiper-pagination-bullet {
-  width: 1.4rem;
-  height: 1.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
   &:not(:last-child) {
     margin-right: 2rem !important;
     margin-left: 0 !important;

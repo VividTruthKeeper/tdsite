@@ -1,6 +1,6 @@
 // Swiper
 const partnerSwiper = new Swiper(".partnerSwiper", {
-  slidesPerView: 5,
+  slidesPerView: 1,
   spaceBetween: 0,
   autoplay: {
     delay: 3000,
