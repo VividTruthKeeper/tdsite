@@ -164,6 +164,57 @@ a {
      object-fit: contain;
 }
 
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 4;
+  -webkit-box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2), -0.1rem -0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ffffff;
+}
+
+.nav-dropdown a {
+  padding: 1.2rem;
+  background: #ffffff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.nav-dropdown a:hover {
+  background: #d0d0d0;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.nav-dropdown.active {
+  opacity: 1;
+  max-height: 10rem;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
 .hero {
   max-width: unset;
   max-height: unset;
@@ -206,14 +257,14 @@ a {
 
 .about-left h5 {
   margin-top: 0.8rem;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #333333;
   font-weight: normal;
   line-height: 2.9rem;
 }
 
 .about-left h6 {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   color: #333333;
   font-weight: normal;
   line-height: 2.9rem;

@@ -30,3 +30,41 @@
 .nav-logo {
   @include imgStyle(19.6rem, 4.3rem, contain);
 }
+
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+.nav-dropdown {
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  z-index: 4;
+  box-shadow: 0.1rem 0.1rem 0.3rem rgba(0, 0, 0, 0.2),
+    -0.1rem -0.1rem 0.3rem rgba(0, 0, 0, 0.2);
+  @include transition-std;
+  @include flex(column);
+  background: $base-white;
+
+  a {
+    padding: 1.2rem;
+    background: $base-white;
+    @include transition-std;
+
+    &:hover {
+      background: $hover-white;
+      @include transition-std;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    max-height: 10rem;
+    @include transition-std;
+  }
+}

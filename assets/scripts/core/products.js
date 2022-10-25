@@ -39,5 +39,65 @@ class AssignYear {
     return year;
   }
 }
+class AssignEvent {
+  identifier;
+  eventType;
+  actionType;
+  addedClass = "active";
+  target = "self";
+  /**
+   * ID or class of an HTML element
+   * @param {string} identifier
+   * Event type on which action is executed
+   * @param {string} eventType
+   * Type of action
+   * @param {"add" | "remove" | "toggle"} actionType
+   * Added classname
+   * @param {string} addedClass
+   * Target element identifier
+   * @param {string} target
+   *
+   */
+  constructor(identifier, eventType, actionType, addedClass, target) {
+    this.identifier = identifier;
+    this.eventType = eventType;
+    this.actionType = actionType;
+    this.addedClass = addedClass;
+    this.target = target;
+  }
+
+  listen() {
+    const element = new Select(this.identifier).getElement();
+    let target;
+    if (this.target === "self") {
+      target = element;
+    } else {
+      target = new Select(this.target).getElement();
+    }
+    element.addEventListener(this.eventType, () => {
+      switch (this.actionType) {
+        case "add":
+          target.classList.add(this.addedClass);
+          break;
+        case "remove":
+          target.classList.remove(this.addedClass);
+          break;
+        case "toggle":
+          target.classList.toggle(this.addedClass);
+          break;
+        default:
+          throw new Error("Bad action type!");
+      }
+    });
+    return [element, target];
+  }
+}
 
 const displayedYear = new AssignYear("#year").assign();
+const dropdownPair = new AssignEvent(
+  ".nav-dropdown-wrapper",
+  "click",
+  "toggle",
+  "active",
+  ".nav-dropdown"
+).listen();
