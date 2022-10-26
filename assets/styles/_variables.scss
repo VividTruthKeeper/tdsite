@@ -5,6 +5,8 @@ $base-orange: #ff8007;
 $base-gray: #c4c4c4;
 $light-gray: #f2f2f2;
 $base-black: #333333;
+$section-fz: 3.2rem;
+$section-fz-mobile: 2.4rem;
 
 // Mixins
 
@@ -59,8 +61,11 @@ $base-black: #333333;
   gap: 1.6rem;
   h4 {
     text-transform: uppercase;
-    font-size: 3.2rem;
     color: $base-blue;
+    font-size: $section-fz;
+    @media screen and (max-width: 600px) {
+      font-size: $section-fz-mobile;
+    }
   }
   span {
     display: block;
@@ -80,4 +85,9 @@ $base-black: #333333;
   text-transform: uppercase;
   font-size: 1.6rem;
   color: $base-white;
+}
+
+// Media
+@media screen and (max-width: 600px) {
+  $section-fz: 2.4rem;
 }

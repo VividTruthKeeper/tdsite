@@ -101,3 +101,19 @@ const dropdownPair = new AssignEvent(
   "active",
   ".nav-dropdown"
 ).listen();
+
+const burgerPair = new AssignEvent(
+  ".nav-burger",
+  "click",
+  "add",
+  "active",
+  ".burger-wrapper"
+).listen();
+
+const burgerClosePair = new AssignEvent(
+  ".burger-outer",
+  "click",
+  "remove",
+  "active",
+  ".burger-wrapper"
+).listen();

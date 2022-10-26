@@ -1,7 +1,7 @@
 .top-footer-inner {
   padding-bottom: 16rem;
-  @include grid(false, repeat(3, minmax(17rem, 21.2rem)));
-  align-items: center;
+  @include grid(false, repeat(3, minmax(17rem, 24.2rem)));
+  align-items: flex-start;
   justify-content: space-between;
   gap: 2.4rem;
 }
@@ -61,5 +61,25 @@
     color: $base-blue;
     font-size: 2.4rem;
     line-height: 2.9rem;
+  }
+}
+
+// Media
+@media screen and (max-width: 1000px) {
+  .top-footer-inner {
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(17rem, 24.2rem));
+    gap: 4.4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .top-footer-inner {
+    padding-bottom: 8rem;
+  }
+  .top-footer-head {
+    h4 {
+      font-size: 1.8rem;
+    }
   }
 }

@@ -50,10 +50,50 @@
 }
 
 .about-dots-blue {
-  top: -7.2rem;
-  right: -7.2rem;
+  top: -4.2rem;
+  right: -4.2rem;
 }
 .about-dots-orange {
-  bottom: -7.2rem;
-  left: -7.2rem;
+  bottom: -4.2rem;
+  left: -4.2rem;
+}
+
+// Media
+
+@media screen and (max-width: 1400px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+    gap: 11rem;
+    padding: 8rem 0 16rem;
+  }
+  .about-right {
+    justify-content: center;
+  }
+  .about-img {
+    justify-self: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-left {
+    h5,
+    h6 {
+      font-size: 1.6rem;
+    }
+    .about-btn {
+      max-width: unset;
+    }
+  }
+  .about-inner {
+    padding-bottom: 8rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .about-dots-blue {
+    right: 0;
+  }
+  .about-dots-orange {
+    left: 0;
+  }
 }

@@ -46,3 +46,35 @@
     }
   }
 }
+
+// Media
+
+@media screen and (max-width: 1000px) {
+  .products-container {
+    margin: 0;
+    padding: 0;
+    max-width: unset;
+    width: 100%;
+  }
+  .products-title {
+    padding: 0 1.6rem;
+  }
+
+  .products-item {
+    min-height: 21.4rem;
+    h5 {
+      font-size: 1.8rem;
+    }
+
+    img {
+      min-height: 21.4rem;
+    }
+  }
+}
+
+// Media
+@media screen and (max-width: 600px) {
+  .products-inner {
+    padding-bottom: 8rem;
+  }
+}

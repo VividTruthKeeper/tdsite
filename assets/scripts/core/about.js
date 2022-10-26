@@ -94,11 +94,26 @@ class AssignEvent {
 }
 
 const displayedYear = new AssignYear("#year").assign();
-
 const dropdownPair = new AssignEvent(
   ".nav-dropdown-wrapper",
   "click",
   "toggle",
   "active",
   ".nav-dropdown"
+).listen();
+
+const burgerPair = new AssignEvent(
+  ".nav-burger",
+  "click",
+  "add",
+  "active",
+  ".burger-wrapper"
+).listen();
+
+const burgerClosePair = new AssignEvent(
+  ".burger-outer",
+  "click",
+  "remove",
+  "active",
+  ".burger-wrapper"
 ).listen();

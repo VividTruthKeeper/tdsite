@@ -19,3 +19,15 @@
     }
   }
 }
+
+// Media
+@media screen and (max-width: 600px) {
+  .about-content {
+    p {
+      font-size: 1.8rem;
+    }
+  }
+  .main-inner {
+    padding: 8rem 0;
+  }
+}

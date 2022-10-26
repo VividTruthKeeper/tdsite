@@ -97,3 +97,21 @@
     height: 2rem;
   }
 }
+
+// Media
+@media screen and (max-width: 1000px) {
+  .form {
+    bottom: 14rem;
+  }
+  .map-form {
+    padding-bottom: 110rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .form {
+    grid-template-columns: 1fr;
+    max-height: 88rem;
+    padding: 6rem 1.5rem;
+  }
+}

@@ -75,3 +75,10 @@
 .swiper-pagination-bullet-active {
   background: $base-blue;
 }
+
+// Media
+@media screen and (max-width: 600px) {
+  .partners-inner {
+    padding-bottom: 8rem;
+  }
+}

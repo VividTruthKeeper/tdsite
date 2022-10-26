@@ -15,6 +15,21 @@ const partnerSwiper = new Swiper(".partnerSwiper", {
     clickable: true,
     el: ".swiper-pagination",
   },
+
+  breakpoints: {
+    1200: {
+      slidesPerView: 5,
+    },
+    1000: {
+      slidesPerView: 4,
+    },
+    850: {
+      slidesPerView: 3,
+    },
+    700: {
+      slidesPerView: 2,
+    },
+  },
 });
 
 // Abstract class
@@ -121,4 +136,20 @@ const dropdownPair = new AssignEvent(
   "toggle",
   "active",
   ".nav-dropdown"
+).listen();
+
+const burgerPair = new AssignEvent(
+  ".nav-burger",
+  "click",
+  "add",
+  "active",
+  ".burger-wrapper"
+).listen();
+
+const burgerClosePair = new AssignEvent(
+  ".burger-outer",
+  "click",
+  "remove",
+  "active",
+  ".burger-wrapper"
 ).listen();

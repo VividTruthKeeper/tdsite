@@ -68,3 +68,161 @@
     @include transition-std;
   }
 }
+
+// Burger
+
+.nav-burger {
+  cursor: pointer;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+
+  &.active {
+    .burger-line-2 {
+      opacity: 0;
+      @include transition-std;
+    }
+    .burger-line {
+      top: 50%;
+    }
+    .burger-line-1 {
+      transform: rotate(45deg);
+    }
+    .burger-line-3 {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.burger-line {
+  opacity: 1;
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 2rem;
+  background: $base-blue;
+  transform-origin: center;
+  @include transition-std;
+}
+.burger-line-1,
+.burger-line-3 {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 0.3rem;
+  background: $base-blue;
+  border-radius: 2rem;
+  @include transition-std;
+  transform: rotate(0deg);
+}
+
+.burger-line-1 {
+  top: 0.4rem;
+}
+.burger-line-3 {
+  top: calc(100% - 0.5rem);
+}
+
+.burger-wrapper {
+  @include flex;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: -120%;
+  width: 100vw;
+  height: 100vh;
+  @include transition-std;
+  &.active {
+    @include transition-std;
+    right: 0;
+
+    .burger-outer {
+      width: 22%;
+      @include transition-std;
+    }
+  }
+}
+
+.burger-inner {
+  @include flex(column);
+  align-items: center;
+  justify-content: space-between;
+  padding: 7rem 3rem;
+  min-height: 100vh;
+  width: 78%;
+  background: $base-blue;
+}
+
+.burger-outer {
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  width: 0;
+  min-height: 100vh;
+  @include transition-std;
+}
+
+.burger-close {
+  position: absolute;
+  left: 50%;
+  top: 1rem;
+  transform: translateX(-50%);
+}
+
+.burger-logo-wrapper {
+  @include flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.burger-logo {
+  @include imgStyle(16.1rem, 4.2rem, contain);
+}
+
+.burger-top {
+  @include flex(column);
+
+  gap: 5.4rem;
+}
+
+.burger-links {
+  @include flex(column);
+  gap: 3.4rem;
+  a {
+    padding: 1rem 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: $base-white;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+.burger-language {
+  @include flex;
+  align-items: center;
+  gap: 3.2rem;
+
+  button {
+    padding: 1rem;
+    color: $base-white;
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+}
+
+// Media
+
+@media screen and (max-width: 1000px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-burger {
+    @include flex;
+  }
+}
