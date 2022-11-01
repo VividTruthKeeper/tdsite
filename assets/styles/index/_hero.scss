@@ -1,3 +1,15 @@
 .hero {
   @include imgStyle($objFit: cover);
 }
+
+// Media
+@media screen and (max-width: 1000px) {
+  .hero {
+    min-height: 42.8rem;
+    overflow: hidden;
+
+    img {
+      min-height: 42.8rem;
+    }
+  }
+}

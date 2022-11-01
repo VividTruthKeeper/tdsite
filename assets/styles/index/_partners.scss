@@ -77,6 +77,14 @@
 }
 
 // Media
+@media screen and (max-width: 1000px) {
+  .swiper-pagination {
+    display: none;
+  }
+  .swiper-wrapper {
+    min-height: unset;
+  }
+}
 @media screen and (max-width: 600px) {
   .partners-inner {
     padding-bottom: 8rem;
