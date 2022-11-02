@@ -203,12 +203,41 @@
   }
 }
 
-.burger-language {
-  @include flex;
-  align-items: center;
-  gap: 3.2rem;
+.burger-dropdown {
+  width: 100%;
+  background: $dark-blue;
+  overflow: hidden;
+  position: absolute;
+  max-height: 0;
+  left: 0;
+  bottom: 100%;
+  @include transition-std;
 
   button {
+    order: -1;
+    padding: 1rem;
+    color: $base-white;
+    font-weight: bold;
+    font-size: 2.5rem;
+
+    &.active {
+      order: 99999;
+    }
+  }
+
+  &.active {
+    max-height: 16.2rem;
+    @include transition-std;
+  }
+}
+
+.burger-language {
+  background: $dark-blue;
+  position: relative;
+  @include transition-std;
+
+  span {
+    display: block;
     padding: 1rem;
     color: $base-white;
     font-weight: bold;

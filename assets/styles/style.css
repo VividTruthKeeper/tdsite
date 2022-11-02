@@ -316,13 +316,38 @@ body {
   letter-spacing: 0.1em;
 }
 
-.burger-language {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 3.2rem;
+.burger-dropdown {
+  width: 100%;
+  background: #244e9c;
+  overflow: hidden;
+  position: absolute;
+  max-height: 0;
+  left: 0;
+  bottom: 100%;
+  transition: 0.3s all ease;
 }
-.burger-language button {
+.burger-dropdown button {
+  order: -1;
+  padding: 1rem;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+.burger-dropdown button.active {
+  order: 99999;
+}
+.burger-dropdown.active {
+  max-height: 16.2rem;
+  transition: 0.3s all ease;
+}
+
+.burger-language {
+  background: #244e9c;
+  position: relative;
+  transition: 0.3s all ease;
+}
+.burger-language span {
+  display: block;
   padding: 1rem;
   color: #ffffff;
   font-weight: bold;

@@ -117,3 +117,11 @@ const burgerClosePair = new AssignEvent(
   "active",
   ".burger-wrapper"
 ).listen();
+
+const burgerLang = new AssignEvent(
+  ".burger-language",
+  "click",
+  "toggle",
+  "active",
+  ".burger-dropdown"
+).listen();
