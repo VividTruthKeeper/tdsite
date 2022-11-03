@@ -476,7 +476,7 @@ body {
 @media screen and (max-width: 1000px) {
   .about-inner {
     grid-template-columns: 1fr;
-    padding: 2.5rem 0 16rem 0;
+    padding: 4.5rem 0 16rem 0;
   }
 }
 @media screen and (max-width: 600px) {
@@ -525,6 +525,17 @@ body {
   .about-right {
     padding: 5rem 0;
     overflow: hidden;
+  }
+}
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: unset;
+    height: 30.8rem;
+  }
+  .hero img,
+.hero picture {
+    min-height: unset;
+    height: 30.8rem;
   }
 }
 .products-inner {

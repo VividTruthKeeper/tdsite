@@ -72,7 +72,7 @@
 @media screen and (max-width: 1000px) {
   .about-inner {
     grid-template-columns: 1fr;
-    padding: 2.5rem 0 16rem 0;
+    padding: 4.5rem 0 16rem 0;
   }
 }
 @media screen and (max-width: 600px) {
@@ -108,11 +108,15 @@
   }
 }
 
-// @media screen and (max-width: 470px) {
-//   .about-dots-blue {
-//     right: 0;
-//   }
-//   .about-dots-orange {
-//     left: 0;
-//   }
-// }
+@media screen and (max-width: 600px) {
+  .hero {
+    min-height: unset;
+    height: 30.8rem;
+
+    img,
+    picture {
+      min-height: unset;
+      height: 30.8rem;
+    }
+  }
+}
